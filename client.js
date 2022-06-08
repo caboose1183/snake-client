@@ -16,16 +16,9 @@ const connect = function () {
   conn.on ('connect', () => {
     console.log ('Successfully connected to game server')
     conn.write ('Name: SID')
-
-    // setInterval (() => {
-    //   conn.write ('Move: up')
-    // }, 50)
-
-
   })
-
 
   return conn;
 };
 
-module.exports = {connect};
+module.exports = connect;
