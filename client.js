@@ -13,9 +13,13 @@ const connect = function () {
     console.log("Server says: ", data);
   });
 
+  conn.on ('connect', () => {
+    console.log ('Successfully connected to game server')
+    conn.write ('Name: SID')
+  })
+
+
   return conn;
 };
 
-module.exports = {
-  connect
-}
+module.exports = connect;
